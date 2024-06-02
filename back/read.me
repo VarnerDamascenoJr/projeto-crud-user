@@ -1,0 +1,71 @@
+Projeto CRUD com Node.js e TypeScript
+Este é um projeto de exemplo de um CRUD (Create, Read, Update, Delete) utilizando Node.js e TypeScript.
+
+Funcionalidades
+Criação, leitura, atualização e exclusão de usuários.
+Validação de entrada de dados.
+Testes automatizados abrangentes.
+Instalação
+Clone este repositório:
+
+bash
+Copiar código
+git clone https://github.com/seu-usuario/seu-projeto.git
+Instale as dependências:
+
+bash
+Copiar código
+cd seu-projeto
+npm install
+Execução
+Para executar o projeto em ambiente de desenvolvimento:
+
+bash
+Copiar código
+npm start
+Para executar os testes:
+
+bash
+Copiar código
+npm test
+Pacotes Utilizados
+Express: Framework web para Node.js.
+Sequelize: ORM para banco de dados SQL.
+Jest: Framework de testes para JavaScript/TypeScript.
+Express Validator: Middleware de validação para Express.
+Padrões de Código
+Utilização de TypeScript para tipagem estática.
+Utilização de async/await para operações assíncronas.
+Utilização de padrão de projeto MVC (Model-View-Controller).
+Utilização de padrão de nomenclatura RESTful para rotas.
+Rotas
+/api/users
+GET /api/users: Retorna todos os usuários cadastrados.
+POST /api/users: Cria um novo usuário com os dados fornecidos no corpo da requisição.
+PUT /api/users/:id: Atualiza os dados de um usuário existente com o ID fornecido nos parâmetros da URL. Os dados a serem atualizados devem ser fornecidos no corpo da requisição.
+/api/users/
+GET /api/users/:id: Retorna os detalhes do usuário com o ID fornecido nos parâmetros da URL.
+DELETE /api/users/:id: Exclui o usuário com o ID fornecido nos parâmetros da URL.
+Essas rotas implementam as operações CRUD para manipulação de usuários na aplicação.
+
+Testes Automatizados
+Os testes automatizados foram escritos para verificar o funcionamento adequado da API de usuário (User API). A seguir, uma descrição de cada teste:
+
+Teste: Criar um novo usuário
+
+Descrição: Este teste verifica se a API é capaz de criar um novo usuário com sucesso, enviando uma requisição HTTP POST para o endpoint '/api/users' com os dados de um novo usuário. Em seguida, verifica se a resposta tem o status code 201 (Created) e se o corpo da resposta contém um ID para o novo usuário.
+Teste: Obter todos os usuários
+
+Descrição: Este teste verifica se a API é capaz de retornar todos os usuários cadastrados, enviando uma requisição HTTP GET para o endpoint '/api/users'. Em seguida, verifica se a resposta tem o status code 200 (OK) e se o corpo da resposta é uma array contendo os usuários cadastrados.
+Teste: Atualizar um usuário existente
+
+Descrição: Este teste verifica se a API é capaz de atualizar os dados de um usuário existente, enviando uma requisição HTTP PUT para o endpoint '/api/users/
+' com os novos dados do usuário. Primeiro, o teste cria um novo usuário e obtém o ID do usuário criado. Em seguida, envia uma requisição para atualizar os dados do usuário, verificando se a resposta tem o status code 200 (OK) e se os dados do usuário foram atualizados corretamente.
+Esses testes garantem que a API de usuário esteja funcionando corretamente, criando, obtendo e atualizando usuários conforme o esperado.
+
+Contribuição
+Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novas funcionalidades. Por favor, leia o Guia de Contribuição antes de enviar uma solicitação de pull.
+
+Licença
+Este projeto está licenciado sob a Licença MIT.
+
